@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/assert@^1.95.2":
+"@aws-cdk/assert@^1.120.0":
   version "1.120.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-1.120.0.tgz#2de883d6719a5422c0c06c24037813c93e391864"
   integrity sha512-XGWLuYZ06DXZpueiORN/HQvno5FDZXIT9PeB18xfbIv5v6BxVrbDDekvwKZmRwOqxf/cdhqdw68bw0dsmmIa0A==
@@ -10,6 +10,15 @@
     "@aws-cdk/cloudformation-diff" "1.120.0"
     "@aws-cdk/core" "1.120.0"
     "@aws-cdk/cx-api" "1.120.0"
+    constructs "^3.3.69"
+
+"@aws-cdk/aws-iam@^1.120.0":
+  version "1.120.0"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.120.0.tgz#b7f8db5a7daec0e1343a5f0cc601fb6698ce59f9"
+  integrity sha512-AeZ0z90YONwb/NWPW+xbKnb7eH0olKzI8f5Z7DL0Wex3KpMA7DoRfwdOXs06vQsz4JEJYM1BwzhG3llOMdoJxQ==
+  dependencies:
+    "@aws-cdk/core" "1.120.0"
+    "@aws-cdk/region-info" "1.120.0"
     constructs "^3.3.69"
 
 "@aws-cdk/cfnspec@1.120.0":
