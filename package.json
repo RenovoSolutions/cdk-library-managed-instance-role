@@ -1,8 +1,8 @@
 {
-  "name": "cdk-managed-instance-role",
+  "name": "@renovo-solutions/cdk-managed-instance-role",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brandon/cdk-managed-instance-role.git"
+    "url": "https://github.com/RenovoSolutions/cdk-managed-instance-role.git"
   },
   "scripts": {
     "clobber": "npx projen clobber",

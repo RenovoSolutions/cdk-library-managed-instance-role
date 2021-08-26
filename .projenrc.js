@@ -4,8 +4,8 @@ const project = new AwsCdkConstructLibrary({
   authorAddress: 'webmaster+cdk@renovo1.com',
   cdkVersion: '1.120.0',
   defaultReleaseBranch: 'master',
-  name: 'cdk-managed-instance-role',
-  repositoryUrl: 'https://github.com/brandon/cdk-managed-instance-role.git',
+  name: '@renovo-solutions/cdk-managed-instance-role',
+  repositoryUrl: 'https://github.com/RenovoSolutions/cdk-managed-instance-role.git',
 
   cdkDependencies: [
     "@aws-cdk/aws-iam"
