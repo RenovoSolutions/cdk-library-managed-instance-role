@@ -1,4 +1,4 @@
-# cdk-managed-instance-role
+# cdk-library-managed-instance-role
 
 This CDK Construct Library includes a construct (`ManagedInstanceRole`) which creates an AWS instance profile. By default this instance profile includes the basic policies required for instance management in SSM and the ability to Domain Join the instance.
 
