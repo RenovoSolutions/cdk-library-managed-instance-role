@@ -1,5 +1,5 @@
 {
-  "name": "@renovosolutions/cdk-managed-instance-role",
+  "name": "@renovosolutions/aws-cdk-managed-instance-role",
   "repository": {
     "type": "git",
     "url": "https://github.com/RenovoSolutions/cdk-managed-instance-role.git"
@@ -24,6 +24,7 @@
     "compat": "npx projen compat",
     "publish:npm": "npx projen publish:npm",
     "publish:pypi": "npx projen publish:pypi",
+    "publish:nuget": "npx projen publish:nuget",
     "docgen": "npx projen docgen",
     "release": "npx projen release",
     "projen": "npx projen"
@@ -120,8 +121,12 @@
     "outdir": "dist",
     "targets": {
       "python": {
-        "distName": "cdk-managed-instance-role",
-        "module": "cdk_managed_instance_role"
+        "distName": "renovo-solutions.aws-cdk-managed-instance-role",
+        "module": "managed_instance_role"
+      },
+      "dotnet": {
+        "namespace": "renovosolutions",
+        "packageId": "AwsCdkManagedInstanceRole"
       }
     },
     "tsc": {

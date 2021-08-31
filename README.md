@@ -8,4 +8,12 @@ The construct defines an interface (`IManagedInstanceRoleProps`) to configure th
 
 ## Dev
 
+### Pre-reqs:
+You will need
+- npm installed on your machine
+- AWS CDK installed on your machine
+- python installed on your machine
+- dotnet installed on your machine
+- a github account
+
 This project is managed with `projen`. Modify the `.projenrc.js` file and run `npx projen`. You can also modify this `README` file and the `src` code directory as needed. Github actions take care of publishing utilizing the automatically created workflows from `projen`.

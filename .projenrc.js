@@ -4,7 +4,7 @@ const project = new AwsCdkConstructLibrary({
   authorAddress: 'webmaster+cdk@renovo1.com',
   cdkVersion: '1.120.0',
   defaultReleaseBranch: 'master',
-  name: '@renovosolutions/cdk-managed-instance-role',
+  name: '@renovosolutions/aws-cdk-managed-instance-role',
   repositoryUrl: 'https://github.com/RenovoSolutions/cdk-managed-instance-role.git',
   cdkDependencies: [
     '@aws-cdk/core',
@@ -19,12 +19,12 @@ const project = new AwsCdkConstructLibrary({
   docgen: true,
   eslint: true,
   publishToPypi: {
-    distName: 'cdk-managed-instance-role',
-    module: 'cdk_managed_instance_role',
+    distName: 'renovo-solutions.aws-cdk-managed-instance-role',
+    module: 'managed_instance_role',
   },
-  // publishToNuget: {
-  //   dotNetNamespace: 'renovosolutions.CDK',
-  //   packageId: 'ManagedInstanceRole'
-  // }
+  publishToNuget: {
+    dotNetNamespace: 'renovosolutions',
+    packageId: 'AwsCdkManagedInstanceRole',
+  },
 });
 project.synth();
