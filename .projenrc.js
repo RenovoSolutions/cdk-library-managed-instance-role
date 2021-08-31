@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, ProjectType } = require('projen');
+const { AwsCdkConstructLibrary, ProjectType, NpmAccess } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
@@ -13,6 +13,7 @@ const project = new AwsCdkConstructLibrary({
   projectType: ProjectType.LIB,
   releaseToNpm: true,
   releaseWorkflow: true,
+  npmAccess: NpmAccess.PUBLIC,
   cdkAssert: true,
   mergify: false,
   docgen: true,
