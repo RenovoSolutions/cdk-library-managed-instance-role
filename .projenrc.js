@@ -6,21 +6,24 @@ const project = new AwsCdkConstructLibrary({
   defaultReleaseBranch: 'master',
   name: '@renovo-solutions/cdk-managed-instance-role',
   repositoryUrl: 'https://github.com/RenovoSolutions/cdk-managed-instance-role.git',
-
   cdkDependencies: [
     '@aws-cdk/core',
     '@aws-cdk/aws-iam',
-  ], /* Which AWS CDK modules (those that start with "@aws-cdk/") does this library require when consumed? */
-  // cdkTestDependencies: undefined,    /* AWS CDK modules required for testing. */
-  // deps: [],                          /* Runtime dependencies of this module. */
-  // description: undefined,            /* The description is just a string that helps people understand the purpose of the package. */
-  // devDeps: [],                       /* Build dependencies for this module. */
-  // packageName: undefined,            /* The "name" in package.json. */
-  projectType: ProjectType.LIB, /* Which type of project this is (library/app). */
-  // release: undefined,                /* Add release management to this project. */
+  ],
+  projectType: ProjectType.LIB,
+  releaseToNpm: true,
+  releaseWorkflow: true,
   cdkAssert: true,
   mergify: false,
   docgen: true,
   eslint: true,
+  publishToPypi: {
+    distName: 'cdk-managed-instance-role',
+    module: 'cdk_managed_instance_role'
+  },
+  publishToNuget: {
+    dotNetNamespace: 'renovosolutions.CDK',
+    packageId: 'ManagedInstanceRole'
+  }
 });
 project.synth();
