@@ -23,8 +23,6 @@
     "eslint": "npx projen eslint",
     "compat": "npx projen compat",
     "publish:npm": "npx projen publish:npm",
-    "publish:pypi": "npx projen publish:pypi",
-    "publish:nuget": "npx projen publish:nuget",
     "docgen": "npx projen docgen",
     "release": "npx projen release",
     "projen": "npx projen"
@@ -116,16 +114,7 @@
   "stability": "stable",
   "jsii": {
     "outdir": "dist",
-    "targets": {
-      "python": {
-        "distName": "cdk-managed-instance-role",
-        "module": "cdk_managed_instance_role"
-      },
-      "dotnet": {
-        "namespace": "renovosolutions.CDK",
-        "packageId": "ManagedInstanceRole"
-      }
-    },
+    "targets": {},
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"
