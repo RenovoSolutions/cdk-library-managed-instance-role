@@ -18,10 +18,10 @@ const project = new AwsCdkConstructLibrary({
   mergify: false,
   docgen: true,
   eslint: true,
-  // publishToPypi: {
-  //   distName: 'cdk-managed-instance-role',
-  //   module: 'cdk_managed_instance_role'
-  // },
+  publishToPypi: {
+    distName: 'cdk-managed-instance-role',
+    module: 'cdk_managed_instance_role',
+  },
   // publishToNuget: {
   //   dotNetNamespace: 'renovosolutions.CDK',
   //   packageId: 'ManagedInstanceRole'
