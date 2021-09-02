@@ -6,8 +6,8 @@ junit.xml
 /dist/changelog.md
 /dist/version.txt
 /test/
-!/lib/
 /src/
+!/lib/
 !/lib/**/*.js
 !/lib/**/*.d.ts
 dist
