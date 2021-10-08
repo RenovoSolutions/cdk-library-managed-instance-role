@@ -4,7 +4,7 @@
 
 ### ManagedInstanceRole <a name="@renovosolutions/aws-cdk-managed-instance-role.ManagedInstanceRole"></a>
 
-#### Initializer <a name="@renovosolutions/aws-cdk-managed-instance-role.ManagedInstanceRole.Initializer"></a>
+#### Initializers <a name="@renovosolutions/aws-cdk-managed-instance-role.ManagedInstanceRole.Initializer"></a>
 
 ```typescript
 import { ManagedInstanceRole } from '@renovosolutions/aws-cdk-managed-instance-role'
@@ -36,6 +36,10 @@ new ManagedInstanceRole(scope: Construct, id: string, props: IManagedInstanceRol
 
 ##### `instanceProfile`<sup>Required</sup> <a name="@renovosolutions/aws-cdk-managed-instance-role.ManagedInstanceRole.property.instanceProfile"></a>
 
+```typescript
+public readonly instanceProfile: CfnInstanceProfile;
+```
+
 - *Type:* [`@aws-cdk/aws-iam.CfnInstanceProfile`](#@aws-cdk/aws-iam.CfnInstanceProfile)
 
 ---
@@ -54,6 +58,10 @@ new ManagedInstanceRole(scope: Construct, id: string, props: IManagedInstanceRol
 
 ##### `domainJoinEnabled`<sup>Optional</sup> <a name="@renovosolutions/aws-cdk-managed-instance-role.IManagedInstanceRoleProps.property.domainJoinEnabled"></a>
 
+```typescript
+public readonly domainJoinEnabled: boolean;
+```
+
 - *Type:* `boolean`
 
 Should the role include directory service access with SSM.
@@ -62,6 +70,10 @@ Should the role include directory service access with SSM.
 
 ##### `managedPolicies`<sup>Optional</sup> <a name="@renovosolutions/aws-cdk-managed-instance-role.IManagedInstanceRoleProps.property.managedPolicies"></a>
 
+```typescript
+public readonly managedPolicies: ManagedPolicy[];
+```
+
 - *Type:* [`@aws-cdk/aws-iam.ManagedPolicy`](#@aws-cdk/aws-iam.ManagedPolicy)[]
 
 The managed policies to apply to the role in addition to the default policies.
@@ -69,6 +81,10 @@ The managed policies to apply to the role in addition to the default policies.
 ---
 
 ##### `ssmManagementEnabled`<sup>Optional</sup> <a name="@renovosolutions/aws-cdk-managed-instance-role.IManagedInstanceRoleProps.property.ssmManagementEnabled"></a>
+
+```typescript
+public readonly ssmManagementEnabled: boolean;
+```
 
 - *Type:* `boolean`
 
