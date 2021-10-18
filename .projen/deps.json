@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.121.0",
+      "version": "^1.128.0",
       "type": "build"
     },
     {
@@ -11,7 +11,7 @@
     },
     {
       "name": "@types/node",
-      "version": "^10.17.0",
+      "version": "^14.17.0",
       "type": "build"
     },
     {
@@ -91,12 +91,12 @@
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.121.0",
+      "version": "^1.128.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.121.0",
+      "version": "^1.128.0",
       "type": "peer"
     },
     {
@@ -106,12 +106,12 @@
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.121.0",
+      "version": "^1.128.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.121.0",
+      "version": "^1.128.0",
       "type": "runtime"
     }
   ],

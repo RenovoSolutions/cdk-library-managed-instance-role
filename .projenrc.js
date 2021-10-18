@@ -1,8 +1,8 @@
-const { AwsCdkConstructLibrary, ProjectType, NpmAccess } = require('projen');
+const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '1.121.0',
+  cdkVersion: '1.128.0',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/aws-cdk-managed-instance-role',
   description: 'AWS CDK Construct Library to create an instance role for instances managed by SSM and capable of joining an AWS managed domain.',
@@ -11,7 +11,6 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/aws-iam',
   ],
-  projectType: ProjectType.LIB,
   releaseToNpm: true,
   releaseWorkflow: true,
   npmAccess: NpmAccess.PUBLIC,
