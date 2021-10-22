@@ -15,7 +15,6 @@ const project = new AwsCdkConstructLibrary({
   releaseWorkflow: true,
   npmAccess: NpmAccess.PUBLIC,
   cdkAssert: true,
-  mergify: false,
   docgen: true,
   eslint: true,
   publishToPypi: {
