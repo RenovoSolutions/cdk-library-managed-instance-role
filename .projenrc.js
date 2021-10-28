@@ -4,7 +4,7 @@ const project = new AwsCdkConstructLibrary({
   authorAddress: 'webmaster+cdk@renovo1.com',
   cdkVersion: '1.129.0',
   defaultReleaseBranch: 'master',
-  name: '@renovosolutions/aws-cdk-managed-instance-role',
+  name: '@renovosolutions/cdk-library-managed-instance-role',
   description: 'AWS CDK Construct Library to create an instance role for instances managed by SSM and capable of joining an AWS managed domain.',
   repositoryUrl: 'https://github.com/RenovoSolutions/cdk-library-managed-instance-role.git',
   cdkDependencies: [

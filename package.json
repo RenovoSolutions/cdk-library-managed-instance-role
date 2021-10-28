@@ -1,5 +1,5 @@
 {
-  "name": "@renovosolutions/aws-cdk-managed-instance-role",
+  "name": "@renovosolutions/cdk-library-managed-instance-role",
   "description": "AWS CDK Construct Library to create an instance role for instances managed by SSM and capable of joining an AWS managed domain.",
   "repository": {
     "type": "git",
