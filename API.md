@@ -9,7 +9,7 @@
 ```typescript
 import { ManagedInstanceRole } from '@renovosolutions/cdk-library-managed-instance-role'
 
-new ManagedInstanceRole(scope: Construct, id: string, props: IManagedInstanceRoleProps)
+new ManagedInstanceRole(scope: Construct, id: string, props: ManagedInstanceRoleProps)
 ```
 
 ##### `scope`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.parameter.scope"></a>
@@ -26,7 +26,7 @@ new ManagedInstanceRole(scope: Construct, id: string, props: IManagedInstanceRol
 
 ##### `props`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.parameter.props"></a>
 
-- *Type:* [`@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps`](#@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps)
+- *Type:* [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps)
 
 ---
 
@@ -45,18 +45,19 @@ public readonly instanceProfile: CfnInstanceProfile;
 ---
 
 
+## Structs <a name="Structs"></a>
 
+### ManagedInstanceRoleProps <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps"></a>
 
-## Protocols <a name="Protocols"></a>
+#### Initializer <a name="[object Object].Initializer"></a>
 
-### IManagedInstanceRoleProps <a name="@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps"></a>
+```typescript
+import { ManagedInstanceRoleProps } from '@renovosolutions/cdk-library-managed-instance-role'
 
-- *Implemented By:* [`@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps`](#@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps)
+const managedInstanceRoleProps: ManagedInstanceRoleProps = { ... }
+```
 
-
-#### Properties <a name="Properties"></a>
-
-##### `domainJoinEnabled`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps.property.domainJoinEnabled"></a>
+##### `domainJoinEnabled`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps.property.domainJoinEnabled"></a>
 
 ```typescript
 public readonly domainJoinEnabled: boolean;
@@ -68,7 +69,7 @@ Should the role include directory service access with SSM.
 
 ---
 
-##### `managedPolicies`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps.property.managedPolicies"></a>
+##### `managedPolicies`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps.property.managedPolicies"></a>
 
 ```typescript
 public readonly managedPolicies: ManagedPolicy[];
@@ -80,7 +81,7 @@ The managed policies to apply to the role in addition to the default policies.
 
 ---
 
-##### `ssmManagementEnabled`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.IManagedInstanceRoleProps.property.ssmManagementEnabled"></a>
+##### `ssmManagementEnabled`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps.property.ssmManagementEnabled"></a>
 
 ```typescript
 public readonly ssmManagementEnabled: boolean;
@@ -93,4 +94,6 @@ Should the role include SSM management.
 By default if domainJoinEnabled is true then this role is always included.
 
 ---
+
+
 
