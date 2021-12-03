@@ -1,10 +1,10 @@
 import { expect as expectCDK, countResources, haveResource, SynthUtils } from '@aws-cdk/assert';
-import * as cdk from '@aws-cdk/core';
+import { Stack, App } from 'aws-cdk-lib';
 import { ManagedInstanceRole } from '../src/index';
 
 test('Snapshot', () => {
-  const app = new cdk.App();
-  const stack = new cdk.Stack(app, 'TestStack', {});
+  const app = new App();
+  const stack = new Stack(app, 'TestStack', {});
 
   new ManagedInstanceRole(stack, 'role', {});
 
@@ -12,8 +12,8 @@ test('Snapshot', () => {
 });
 
 test('Simple test', () => {
-  const app = new cdk.App();
-  const stack = new cdk.Stack(app, 'TestStack');
+  const app = new App();
+  const stack = new Stack(app, 'TestStack');
 
   new ManagedInstanceRole(stack, 'ManagedInstanceRole', {});
 

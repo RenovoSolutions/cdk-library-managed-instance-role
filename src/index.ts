@@ -1,5 +1,5 @@
-import * as iam from '@aws-cdk/aws-iam';
-import * as cdk from '@aws-cdk/core';
+import { aws_iam as iam } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 export interface ManagedInstanceRoleProps {
   /**
@@ -16,11 +16,11 @@ export interface ManagedInstanceRoleProps {
   readonly ssmManagementEnabled?: boolean;
 }
 
-export class ManagedInstanceRole extends cdk.Construct {
+export class ManagedInstanceRole extends Construct {
 
   public readonly instanceProfile: iam.CfnInstanceProfile
 
-  constructor(scope: cdk.Construct, id: string, props: ManagedInstanceRoleProps) {
+  constructor(scope: Construct, id: string, props: ManagedInstanceRoleProps) {
     super(scope, id);
 
     var managedPolicies:iam.IManagedPolicy[] = props.managedPolicies === undefined ? [] : props.managedPolicies;

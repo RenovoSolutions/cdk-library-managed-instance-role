@@ -14,7 +14,7 @@ new ManagedInstanceRole(scope: Construct, id: string, props: ManagedInstanceRole
 
 ##### `scope`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.parameter.scope"></a>
 
-- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
+- *Type:* [`constructs.Construct`](#constructs.Construct)
 
 ---
 
@@ -40,7 +40,7 @@ new ManagedInstanceRole(scope: Construct, id: string, props: ManagedInstanceRole
 public readonly instanceProfile: CfnInstanceProfile;
 ```
 
-- *Type:* [`@aws-cdk/aws-iam.CfnInstanceProfile`](#@aws-cdk/aws-iam.CfnInstanceProfile)
+- *Type:* [`aws-cdk-lib.aws_iam.CfnInstanceProfile`](#aws-cdk-lib.aws_iam.CfnInstanceProfile)
 
 ---
 
@@ -75,7 +75,7 @@ Should the role include directory service access with SSM.
 public readonly managedPolicies: ManagedPolicy[];
 ```
 
-- *Type:* [`@aws-cdk/aws-iam.ManagedPolicy`](#@aws-cdk/aws-iam.ManagedPolicy)[]
+- *Type:* [`aws-cdk-lib.aws_iam.ManagedPolicy`](#aws-cdk-lib.aws_iam.ManagedPolicy)[]
 
 The managed policies to apply to the role in addition to the default policies.
 
