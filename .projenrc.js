@@ -2,7 +2,7 @@ const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '1.134.0',
+  cdkVersion: '2.0.0',
   defaultReleaseBranch: 'master',
   majorVersion: '2',
   releaseBranches: {
@@ -14,8 +14,10 @@ const project = new AwsCdkConstructLibrary({
   description: 'AWS CDK Construct Library to create an instance role for instances managed by SSM and capable of joining an AWS managed domain.',
   repositoryUrl: 'https://github.com/RenovoSolutions/cdk-library-managed-instance-role.git',
   cdkDependencies: [
-    '@aws-cdk/core',
-    '@aws-cdk/aws-iam',
+    'aws-cdk-lib',
+  ],
+  deps: [
+    'constructs@^10.0.0',
   ],
   depsUpgrade: true,
   depsUpgradeOptions: {
@@ -55,6 +57,8 @@ const project = new AwsCdkConstructLibrary({
           'feat',
           'fix',
           'ci',
+          'refactor',
+          'test',
         ],
       },
     },
@@ -73,6 +77,7 @@ const project = new AwsCdkConstructLibrary({
     dotNetNamespace: 'renovosolutions',
     packageId: 'Renovo.AWSCDK.ManagedInstanceRole',
   },
+  workflowNodeVersion: '14.17.0',
 });
 
 project.synth();
