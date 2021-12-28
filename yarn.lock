@@ -965,9 +965,9 @@ acorn@^7.1.1, acorn@^7.4.0:
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
 acorn@^8.2.4:
-  version "8.6.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.6.0.tgz#e3692ba0eb1a0c83eaa4f37f5fa7368dd7142895"
-  integrity sha512-U1riIR+lBSNi3IbxtaHOIKdH8sLFv3NYfNv8sg7ZsNhcfl4HF2++BfqqrNAxoCLQW1iiylOj76ecnaUxz+z9yw==
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.7.0.tgz#90951fde0f8f09df93549481e5fc141445b791cf"
+  integrity sha512-V/LGr1APy+PXIwKebEWrkZPwoeoF+w1jiOBUmuxuiUIaOHtob8Qc9BTrYo7VuI5fR8tqsy+buA2WFooR5olqvQ==
 
 add-stream@^1.0.0:
   version "1.0.0"
@@ -1633,9 +1633,9 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.0:
-  version "10.0.14"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.14.tgz#d4775ca312cb4e681add872006df283b17362501"
-  integrity sha512-KdfVv4s66maPo5DZ/hldkbTxci8oXdnz7ztc6hHbaZMeuoVP8/p/qJrmah9jJrGan6TYQ2t2ujV0j1K8//Q22Q==
+  version "10.0.15"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.15.tgz#8463fbf982133f0ea2ffbae4abc94b55b03e029d"
+  integrity sha512-HmEqwXEF4rtgO9UcB+p8CYoA0OdQG/oATyHa/kwTDrqZ3DIRPdnc4I/h87uS7YZYptfgcmgsQTJkqtDd0TJh0w==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
