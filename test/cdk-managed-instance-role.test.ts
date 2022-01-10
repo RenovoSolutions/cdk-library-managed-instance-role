@@ -1,5 +1,5 @@
-import { expect as expectCDK, countResources, haveResource, SynthUtils } from '@aws-cdk/assert';
 import { Stack, App } from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 import { ManagedInstanceRole } from '../src/index';
 
 test('Snapshot', () => {
@@ -8,7 +8,7 @@ test('Snapshot', () => {
 
   new ManagedInstanceRole(stack, 'role', {});
 
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  expect(Template.fromStack(stack)).toMatchSnapshot();
 });
 
 test('Simple test', () => {
@@ -17,6 +17,6 @@ test('Simple test', () => {
 
   new ManagedInstanceRole(stack, 'ManagedInstanceRole', {});
 
-  expectCDK(stack).to(haveResource('AWS::IAM::Role', 1));
-  expectCDK(stack).to(countResources('AWS::IAM::InstanceProfile', 1));
+  Template.fromStack(stack).resourceCountIs('AWS::IAM::Role', 1);
+  Template.fromStack(stack).resourceCountIs('AWS::IAM::InstanceProfile', 1);
 });

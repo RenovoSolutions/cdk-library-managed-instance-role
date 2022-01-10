@@ -18,7 +18,7 @@ export interface ManagedInstanceRoleProps {
 
 export class ManagedInstanceRole extends Construct {
 
-  public readonly instanceProfile: iam.CfnInstanceProfile
+  public readonly instanceProfile: iam.CfnInstanceProfile;
 
   constructor(scope: Construct, id: string, props: ManagedInstanceRoleProps) {
     super(scope, id);
