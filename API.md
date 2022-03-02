@@ -34,13 +34,51 @@ new ManagedInstanceRole(scope: Construct, id: string, props: ManagedInstanceRole
 
 #### Properties <a name="Properties"></a>
 
-##### `instanceProfile`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.property.instanceProfile"></a>
+##### `arn`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.property.arn"></a>
+
+```typescript
+public readonly arn: string;
+```
+
+- *Type:* `string`
+
+The role arn.
+
+---
+
+##### `name`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* `string`
+
+The role name.
+
+---
+
+##### `role`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.property.role"></a>
+
+```typescript
+public readonly role: IRole;
+```
+
+- *Type:* [`aws-cdk-lib.aws_iam.IRole`](#aws-cdk-lib.aws_iam.IRole)
+
+The role.
+
+---
+
+##### `instanceProfile`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.property.instanceProfile"></a>
 
 ```typescript
 public readonly instanceProfile: CfnInstanceProfile;
 ```
 
 - *Type:* [`aws-cdk-lib.aws_iam.CfnInstanceProfile`](#aws-cdk-lib.aws_iam.CfnInstanceProfile)
+
+The CfnInstanceProfile automatically created for this role.
 
 ---
 
@@ -56,6 +94,19 @@ import { ManagedInstanceRoleProps } from '@renovosolutions/cdk-library-managed-i
 
 const managedInstanceRoleProps: ManagedInstanceRoleProps = { ... }
 ```
+
+##### `createInstanceProfile`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps.property.createInstanceProfile"></a>
+
+```typescript
+public readonly createInstanceProfile: boolean;
+```
+
+- *Type:* `boolean`
+- *Default:* true
+
+Whether or not to associate the role with an instance profile.
+
+---
 
 ##### `domainJoinEnabled`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps.property.domainJoinEnabled"></a>
 
@@ -78,6 +129,18 @@ public readonly managedPolicies: ManagedPolicy[];
 - *Type:* [`aws-cdk-lib.aws_iam.ManagedPolicy`](#aws-cdk-lib.aws_iam.ManagedPolicy)[]
 
 The managed policies to apply to the role in addition to the default policies.
+
+---
+
+##### `retentionPolicy`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRoleProps.property.retentionPolicy"></a>
+
+```typescript
+public readonly retentionPolicy: boolean;
+```
+
+- *Type:* `boolean`
+
+The retention policy for this role.
 
 ---
 
