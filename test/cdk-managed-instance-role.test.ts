@@ -20,3 +20,15 @@ test('Simple test', () => {
   Template.fromStack(stack).resourceCountIs('AWS::IAM::Role', 1);
   Template.fromStack(stack).resourceCountIs('AWS::IAM::InstanceProfile', 1);
 });
+
+test('No instance profile test', () => {
+  const app = new App();
+  const stack = new Stack(app, 'TestStack');
+
+  new ManagedInstanceRole(stack, 'ManagedInstanceRole', {
+    createInstanceProfile: false,
+  });
+
+  Template.fromStack(stack).resourceCountIs('AWS::IAM::Role', 1);
+  Template.fromStack(stack).resourceCountIs('AWS::IAM::InstanceProfile', 0);
+});

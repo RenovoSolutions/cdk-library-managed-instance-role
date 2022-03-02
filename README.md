@@ -11,7 +11,9 @@ The construct defines an interface (`IManagedInstanceRoleProps`) to configure th
 ## Dev
 
 ### Pre-reqs:
-You will need
+
+You will need:
+
 - npm installed on your machine
 - AWS CDK installed on your machine
 - python installed on your machine

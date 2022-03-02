@@ -14,11 +14,38 @@ export interface ManagedInstanceRoleProps {
    * Should the role include SSM management. By default if domainJoinEnabled is true then this role is always included.
    */
   readonly ssmManagementEnabled?: boolean;
+  /**
+   * The retention policy for this role
+   */
+  readonly retentionPolicy?: boolean;
+  /**
+   * Whether or not to associate the role with an instance profile
+   *
+   * @default true
+   */
+  readonly createInstanceProfile?: boolean;
 }
 
 export class ManagedInstanceRole extends Construct {
+  /**
+   * The CfnInstanceProfile automatically created for this role.
+   */
+  public readonly instanceProfile?: iam.CfnInstanceProfile;
 
-  public readonly instanceProfile: iam.CfnInstanceProfile;
+  /**
+   * The role
+   */
+  public readonly role: iam.IRole;
+
+  /**
+   * The role name
+   */
+  public readonly name: string;
+
+  /**
+   * The role arn
+   */
+  public readonly arn: string;
 
   constructor(scope: Construct, id: string, props: ManagedInstanceRoleProps) {
     super(scope, id);
@@ -34,13 +61,18 @@ export class ManagedInstanceRole extends Construct {
     if (ssmManagementEnabled) { managedPolicies.push(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMManagedInstanceCore')); };
     if (domainJoinEnabled) { managedPolicies.push(iam.ManagedPolicy.fromAwsManagedPolicyName('AmazonSSMDirectoryServiceAccess')); };
 
-    const role = new iam.Role(this, 'role', {
+    this.role = new iam.Role(this, 'role', {
       assumedBy: new iam.ServicePrincipal('ec2.amazonaws.com'),
       managedPolicies,
     });
 
-    this.instanceProfile = new iam.CfnInstanceProfile(this, 'instanceProfile', {
-      roles: [role.roleName],
-    });
+    if (props.createInstanceProfile === undefined || props.createInstanceProfile === true) {
+      this.instanceProfile = new iam.CfnInstanceProfile(this, 'instanceProfile', {
+        roles: [this.role.roleName],
+      });
+    }
+
+    this.name = this.role.roleName;
+    this.arn = this.role.roleArn;
   }
 }
