@@ -35,7 +35,7 @@ export class ManagedInstanceRole extends Construct {
   /**
    * The role
    */
-  public readonly role: iam.IRole;
+  public readonly role: iam.Role;
 
   /**
    * The role name

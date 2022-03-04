@@ -61,10 +61,10 @@ The role name.
 ##### `role`<sup>Required</sup> <a name="@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole.property.role"></a>
 
 ```typescript
-public readonly role: IRole;
+public readonly role: Role;
 ```
 
-- *Type:* [`aws-cdk-lib.aws_iam.IRole`](#aws-cdk-lib.aws_iam.IRole)
+- *Type:* [`aws-cdk-lib.aws_iam.Role`](#aws-cdk-lib.aws_iam.Role)
 
 The role.
 
