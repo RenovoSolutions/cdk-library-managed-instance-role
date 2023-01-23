@@ -72,7 +72,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
     dotNetNamespace: 'renovosolutions',
     packageId: 'Renovo.AWSCDK.ManagedInstanceRole',
   },
-  workflowNodeVersion: '14.17.0',
 });
 
 new javascript.UpgradeDependencies(project, {
