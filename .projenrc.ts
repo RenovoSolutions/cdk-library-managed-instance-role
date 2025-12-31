@@ -17,13 +17,14 @@ const project = new awscdk.AwsCdkConstructLibrary({
   repositoryUrl: 'https://github.com/RenovoSolutions/cdk-library-managed-instance-role.git',
   depsUpgrade: true,
   depsUpgradeOptions: {
+    workflow: false,
     workflowOptions: {
       labels: ['auto-approve', 'deps-upgrade'],
     },
     exclude: ['projen'],
   },
   githubOptions: {
-    mergify: true,
+    mergify: false,
     mergifyOptions: {
       rules: [
         {
@@ -46,7 +47,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
       ],
     },
     pullRequestLintOptions: {
-      semanticTitle: true,
+      semanticTitle: false,
       semanticTitleOptions: {
         types: [
           'chore',
@@ -62,6 +63,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   releaseToNpm: true,
   release: true,
+  buildWorkflow: false,
   npmAccess: javascript.NpmAccess.PUBLIC,
   docgen: true,
   eslint: true,
@@ -78,11 +80,13 @@ const project = new awscdk.AwsCdkConstructLibrary({
 new javascript.UpgradeDependencies(project, {
   include: ['projen'],
   taskName: 'upgrade-projen',
-  workflow: true,
+  workflow: false,
   workflowOptions: {
     schedule: javascript.UpgradeDependenciesSchedule.expressions(['0 2 * * 1']),
   },
   pullRequestTitle: 'upgrade projen',
 });
+
+project.gitignore.addPatterns('.github/workflows/release.yml', '.github/workflows/release-*.yml');
 
 project.synth();
